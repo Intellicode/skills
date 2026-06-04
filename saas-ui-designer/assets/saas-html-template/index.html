@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SaaS Workspace</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Stackline</span>
+        </div>
+        <nav class="nav-list">
+          <a class="nav-item active" href="#">Overview</a>
+          <a class="nav-item" href="#">Projects</a>
+          <a class="nav-item" href="#">Deployments</a>
+          <a class="nav-item" href="#">Team</a>
+          <a class="nav-item" href="#">Billing</a>
+          <a class="nav-item" href="#">Settings</a>
+        </nav>
+        <div class="sidebar-footer">
+          <span class="eyebrow">Workspace</span>
+          <strong>Acme Product</strong>
+          <span>Pro plan</span>
+        </div>
+      </aside>
+
+      <div class="main-region">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Production</p>
+            <h1>Deployments</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="search">
+              <span class="sr-only">Search deployments</span>
+              <input type="search" placeholder="Search deployments" />
+            </label>
+            <button class="button secondary">Export</button>
+            <button class="button primary">New deploy</button>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="metric-grid" aria-label="Deployment metrics">
+            <article class="metric">
+              <span class="metric-label">Success rate</span>
+              <strong>99.2%</strong>
+              <span class="trend positive">+1.8% this week</span>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Median build</span>
+              <strong>1m 42s</strong>
+              <span class="trend">12s faster</span>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Open incidents</span>
+              <strong>2</strong>
+              <span class="trend warning">Needs review</span>
+            </article>
+          </section>
+
+          <section class="workspace">
+            <div class="table-panel">
+              <div class="command-bar">
+                <div class="tabs" role="tablist" aria-label="Deployment views">
+                  <button class="tab active" type="button">All</button>
+                  <button class="tab" type="button">Production</button>
+                  <button class="tab" type="button">Failed</button>
+                </div>
+                <button class="button secondary small">Filter</button>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Project</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Owner</th>
+                      <th scope="col">Updated</th>
+                      <th scope="col">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="selected">
+                      <td>
+                        <strong>checkout-api</strong>
+                        <span>main - a83f19c</span>
+                      </td>
+                      <td><span class="status success">Ready</span></td>
+                      <td>Maya Chen</td>
+                      <td>4 min ago</td>
+                      <td>1m 31s</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>merchant-admin</strong>
+                        <span>release - c42de71</span>
+                      </td>
+                      <td><span class="status warning">Queued</span></td>
+                      <td>Jon Bell</td>
+                      <td>16 min ago</td>
+                      <td>Pending</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>docs-site</strong>
+                        <span>main - f90c112</span>
+                      </td>
+                      <td><span class="status danger">Failed</span></td>
+                      <td>Priya Shah</td>
+                      <td>38 min ago</td>
+                      <td>42s</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <aside class="detail-panel" aria-label="Deployment details">
+              <div class="detail-header">
+                <div>
+                  <p class="eyebrow">Selected deployment</p>
+                  <h2>checkout-api</h2>
+                </div>
+                <span class="status success">Ready</span>
+              </div>
+              <dl class="metadata">
+                <div>
+                  <dt>Environment</dt>
+                  <dd>Production</dd>
+                </div>
+                <div>
+                  <dt>Region</dt>
+                  <dd>US East</dd>
+                </div>
+                <div>
+                  <dt>Reviewer</dt>
+                  <dd>Alex Morgan</dd>
+                </div>
+              </dl>
+              <div class="activity">
+                <h3>Activity</h3>
+                <p><strong>Build completed</strong> after 1m 31s.</p>
+                <p><strong>Health checks passed</strong> across 8 routes.</p>
+                <p><strong>Maya Chen</strong> promoted this deploy.</p>
+              </div>
+              <button class="button secondary full-width">View logs</button>
+            </aside>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
